@@ -27,50 +27,51 @@ export const Contact: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           
           {/* Contact Info */}
-          <div>
+          <div className="animate-fadeIn">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Let's Build Something <span className="text-brand-accent">Big</span></h1>
             <p className="text-slate-400 text-lg mb-10">
               Ready to elevate your business? Fill out the form, or reach out directly. We're excited to hear your vision.
             </p>
 
             <div className="space-y-8">
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-brand-navy rounded-lg text-brand-accent border border-white/10">
+              <div className="flex items-start gap-4 group">
+                <div className="p-3 bg-brand-navy rounded-lg text-brand-accent border border-white/10 group-hover:border-brand-accent/50 transition-colors">
                   <Mail className="w-6 h-6" />
                 </div>
                 <div>
                   <h4 className="font-bold text-white text-lg">Email Us</h4>
-                  <p className="text-slate-400">hello@dreambig.digital</p>
+                  <p className="text-slate-400 hover:text-brand-accent transition-colors cursor-pointer">vaigundaraja13off@gmail.com</p>
                   <p className="text-slate-500 text-sm">Response within 24 hours.</p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-brand-navy rounded-lg text-brand-accent border border-white/10">
+              <div className="flex items-start gap-4 group">
+                <div className="p-3 bg-brand-navy rounded-lg text-brand-accent border border-white/10 group-hover:border-brand-accent/50 transition-colors">
                   <Phone className="w-6 h-6" />
                 </div>
                 <div>
                   <h4 className="font-bold text-white text-lg">Call Us</h4>
-                  <p className="text-slate-400">+1 (555) 123-4567</p>
-                  <p className="text-slate-500 text-sm">Mon-Fri, 9am - 6pm PST</p>
+                  <p className="text-slate-400 hover:text-brand-accent transition-colors cursor-pointer">+91 8248976853</p>
+                  <p className="text-slate-500 text-sm">Direct support line.</p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-brand-navy rounded-lg text-brand-accent border border-white/10">
+              <div className="flex items-start gap-4 group">
+                <div className="p-3 bg-brand-navy rounded-lg text-brand-accent border border-white/10 group-hover:border-brand-accent/50 transition-colors">
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-white text-lg">Visit HQ</h4>
-                  <p className="text-slate-400">101 Innovation Blvd, Suite 400</p>
-                  <p className="text-slate-400">Tech City, CA 94000</p>
+                  <h4 className="font-bold text-white text-lg">Visit Us</h4>
+                  <p className="text-slate-400">Chennai,</p>
+                  <p className="text-slate-400">Tamil nadu</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Form */}
-          <div className="bg-brand-navy p-8 rounded-2xl border border-white/5 shadow-2xl">
+          <div className="bg-brand-navy p-8 rounded-2xl border border-white/5 shadow-2xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-brand-accent/5 blur-3xl -z-10"></div>
             <h3 className="text-2xl font-bold mb-6 text-white">Start Your Journey</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -108,7 +109,7 @@ export const Contact: React.FC = () => {
                     id="phone"
                     name="phone"
                     className="w-full bg-brand-dark border border-white/10 rounded-lg p-3 text-white focus:border-brand-accent focus:outline-none transition-colors"
-                    placeholder="+1 (555) 000-0000"
+                    placeholder="+91 00000 00000"
                     onChange={handleChange}
                   />
                 </div>
@@ -141,7 +142,7 @@ export const Contact: React.FC = () => {
                 ></textarea>
               </div>
 
-              <Button variant="primary" className="w-full">Send Message</Button>
+              <Button variant="primary" className="w-full shadow-[0_0_20px_rgba(6,182,212,0.4)]">Send Message</Button>
             </form>
           </div>
         </div>

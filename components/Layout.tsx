@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Rocket, ChevronRight, Mail, MapPin, Phone, Linkedin, Twitter, Instagram } from 'lucide-react';
+import { Menu, X, Mail, MapPin, Phone, Linkedin, Twitter, Instagram } from 'lucide-react';
 import { NavItem } from '../types';
+import { Logo } from './Logo';
 
 const navItems: NavItem[] = [
   { label: 'Home', path: '/' },
@@ -39,14 +40,8 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
         }`}
       >
         <div className="container mx-auto px-6 flex justify-between items-center">
-          <Link to="/" className="flex items-center gap-2 group">
-            <div className="relative">
-              <div className="absolute inset-0 bg-brand-accent blur-lg opacity-20 group-hover:opacity-40 transition-opacity"></div>
-              <Rocket className="w-8 h-8 text-brand-accent relative z-10" />
-            </div>
-            <span className="text-2xl font-bold tracking-tight text-white">
-              DREAM <span className="text-brand-accent">BIG</span>
-            </span>
+          <Link to="/" className="group transition-transform hover:scale-105">
+            <Logo className="h-10 md:h-12" />
           </Link>
 
           {/* Desktop Nav */}
@@ -64,7 +59,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
             ))}
             <Link
               to="/contact"
-              className="px-5 py-2.5 text-sm font-semibold text-brand-dark bg-brand-accent hover:bg-white transition-colors rounded-sm ml-4"
+              className="px-5 py-2.5 text-sm font-semibold text-brand-dark bg-brand-accent hover:bg-white transition-colors rounded-sm ml-4 shadow-[0_0_15px_rgba(6,182,212,0.3)]"
             >
               Get Started
             </Link>
@@ -107,11 +102,8 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
             <div className="col-span-1 md:col-span-1">
-              <Link to="/" className="flex items-center gap-2 mb-6">
-                <Rocket className="w-6 h-6 text-brand-accent" />
-                <span className="text-xl font-bold text-white">
-                  DREAM <span className="text-brand-accent">BIG</span>
-                </span>
+              <Link to="/" className="inline-block mb-6">
+                <Logo className="h-10" />
               </Link>
               <p className="text-slate-400 leading-relaxed mb-6">
                 Innovate. Elevate. Succeed. We are the digital partners for ambitious founders building the future.
@@ -124,7 +116,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
             </div>
 
             <div>
-              <h4 className="text-white font-bold mb-6">Services</h4>
+              <h4 className="text-white font-bold mb-6 uppercase text-sm tracking-widest">Services</h4>
               <ul className="space-y-3 text-slate-400">
                 <li><Link to="/services" className="hover:text-brand-accent transition-colors">Digital Strategy</Link></li>
                 <li><Link to="/services" className="hover:text-brand-accent transition-colors">Web Development</Link></li>
@@ -134,7 +126,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
             </div>
 
             <div>
-              <h4 className="text-white font-bold mb-6">Company</h4>
+              <h4 className="text-white font-bold mb-6 uppercase text-sm tracking-widest">Company</h4>
               <ul className="space-y-3 text-slate-400">
                 <li><Link to="/about" className="hover:text-brand-accent transition-colors">About Us</Link></li>
                 <li><Link to="/portfolio" className="hover:text-brand-accent transition-colors">Case Studies</Link></li>
@@ -144,19 +136,19 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
             </div>
 
             <div>
-              <h4 className="text-white font-bold mb-6">Contact</h4>
+              <h4 className="text-white font-bold mb-6 uppercase text-sm tracking-widest">Contact</h4>
               <ul className="space-y-4 text-slate-400">
                 <li className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-brand-accent shrink-0" />
-                  <span>101 Innovation Blvd,<br />Tech City, CA 94000</span>
+                  <span>Chennai,<br />Tamil nadu</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-brand-accent shrink-0" />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+91 8248976853</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Mail className="w-5 h-5 text-brand-accent shrink-0" />
-                  <span>hello@dreambig.digital</span>
+                  <span className="break-all">vaigundaraja13off@gmail.com</span>
                 </li>
               </ul>
             </div>
